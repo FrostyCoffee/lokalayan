@@ -3,7 +3,7 @@ LokaLayan merupakan aplikasi penghubung nelayan lokal dengan end-buyer, sehingga
 
 
 Pindang Yareu<br>
-Ketua Kelompok: Taufiqurrahman<br>
-Anggota 1: Taufiqurrahman<br>
-Anggota 2: Lalu Kevin Proudy Handal<br>
-Anggota 3: Timothy Tanuwidjaya
+Ketua Kelompok: <br>
+Anggota 1: <br>
+Anggota 2: <br>
+Anggota 3: <br>
