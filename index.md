@@ -1,3 +1,7 @@
+---
+layout: page
+title: Project Junior Project TI
+---
 
 # Project Junior Project TI<br><br>LokaLayan
 
