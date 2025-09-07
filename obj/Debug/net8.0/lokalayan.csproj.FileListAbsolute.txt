@@ -1,0 +1,15 @@
+C:\lokalayan\bin\Debug\net8.0\lokalayan.exe
+C:\lokalayan\bin\Debug\net8.0\lokalayan.deps.json
+C:\lokalayan\bin\Debug\net8.0\lokalayan.runtimeconfig.json
+C:\lokalayan\bin\Debug\net8.0\lokalayan.dll
+C:\lokalayan\bin\Debug\net8.0\lokalayan.pdb
+C:\lokalayan\obj\Debug\net8.0\lokalayan.GeneratedMSBuildEditorConfig.editorconfig
+C:\lokalayan\obj\Debug\net8.0\lokalayan.AssemblyInfoInputs.cache
+C:\lokalayan\obj\Debug\net8.0\lokalayan.AssemblyInfo.cs
+C:\lokalayan\obj\Debug\net8.0\lokalayan.csproj.CoreCompileInputs.cache
+C:\lokalayan\obj\Debug\net8.0\lokalayan.sourcelink.json
+C:\lokalayan\obj\Debug\net8.0\lokalayan.dll
+C:\lokalayan\obj\Debug\net8.0\refint\lokalayan.dll
+C:\lokalayan\obj\Debug\net8.0\lokalayan.pdb
+C:\lokalayan\obj\Debug\net8.0\lokalayan.genruntimeconfig.cache
+C:\lokalayan\obj\Debug\net8.0\ref\lokalayan.dll
