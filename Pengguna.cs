@@ -36,24 +36,17 @@ namespace LokaLayan
             set { password = value; }
         }
 
-        public string Role
-        {
-            get { return role; }
-            set { role = value; }
-        }
-
         // Constructor
         public Pengguna()
         {
         }
 
-        public Pengguna(int idPengguna, string nama, string email, string password, string role)
+        public Pengguna(int idPengguna, string nama, string email, string password)
         {
             this.idPengguna = idPengguna;
             this.nama = nama;
             this.email = email;
             this.password = password;
-            this.role = role;
         }
 
         // Methods
@@ -63,7 +56,7 @@ namespace LokaLayan
             return this.email == email && this.password == password;
         }
 
-        public bool Register(string nama, string email, string password, string role)
+        public bool Register(string nama, string email, string password)
         {
             // Implementasi sederhana register
             try
@@ -71,7 +64,6 @@ namespace LokaLayan
                 this.nama = nama;
                 this.email = email;
                 this.password = password;
-                this.role = role;
                 return true;
             }
             catch
