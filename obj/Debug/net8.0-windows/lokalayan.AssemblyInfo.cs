@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lokalayan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cc44b9a21e43e94b01356f0fd92d6fbe4303f9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8625985a030d5953836c4d04eb785d425584a4d")]
 [assembly: System.Reflection.AssemblyProductAttribute("lokalayan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lokalayan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
