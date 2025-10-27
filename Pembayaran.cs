@@ -1,12 +1,12 @@
 using System;
 
-namespace LokaLayan
+namespace lokalayan
 {
     public class Pembayaran
     {
         // Private fields
         private int idPembayaran;
-        private string metode;
+        private string metode = string.Empty;
         private string status;
 
         // Properties

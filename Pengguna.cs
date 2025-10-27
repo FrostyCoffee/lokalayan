@@ -1,17 +1,16 @@
 using System;
 
-namespace LokaLayan
+namespace lokalayan
 {
     public class Pengguna
     {
         // Private fields
         private int idPengguna;
-        private string nama;
-        private string email;
-        private string password;
-        private string role;
+        private string nama = string.Empty;
+        private string email = string.Empty;
+        private string password = string.Empty;
 
-        // Properties (getter dan setter)
+        // Properties
         public int IdPengguna
         {
             get { return idPengguna; }
@@ -36,9 +35,10 @@ namespace LokaLayan
             set { password = value; }
         }
 
-        // Constructor
+        // Constructors
         public Pengguna()
         {
+            // Default constructor
         }
 
         public Pengguna(int idPengguna, string nama, string email, string password)
@@ -52,23 +52,33 @@ namespace LokaLayan
         // Methods
         public bool Login(string email, string password)
         {
-            // Implementasi sederhana login
-            return this.email == email && this.password == password;
-        }
-
-        public bool Register(string nama, string email, string password)
-        {
-            // Implementasi sederhana register
-            try
+            // Simple login implementation
+            if (this.email == email && this.password == password)
             {
-                this.nama = nama;
-                this.email = email;
-                this.password = password;
+                Console.WriteLine($"Login berhasil: {nama}");
                 return true;
             }
-            catch
+            Console.WriteLine("Login gagal: Email atau password salah");
+            return false;
+        }
+
+        public void UpdateProfile(string nama, string email)
+        {
+            this.nama = nama;
+            this.email = email;
+            Console.WriteLine("Profil berhasil diperbarui");
+        }
+
+        public void GantiPassword(string passwordLama, string passwordBaru)
+        {
+            if (this.password == passwordLama)
             {
-                return false;
+                this.password = passwordBaru;
+                Console.WriteLine("Password berhasil diubah");
+            }
+            else
+            {
+                Console.WriteLine("Password lama tidak sesuai");
             }
         }
     }

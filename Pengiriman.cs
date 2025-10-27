@@ -1,13 +1,13 @@
 using System;
 
-namespace LokaLayan
+namespace lokalayan
 {
     public class Pengiriman
     {
         // Private fields
         private int idPengiriman;
-        private string lokasiBarang;
-        private string metode;
+        private string lokasiBarang = string.Empty;
+        private string metode = string.Empty;
 
         // Properties
         public int IdPengiriman
