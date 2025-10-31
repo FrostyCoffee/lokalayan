@@ -1,12 +1,12 @@
 using System;
 
-namespace LokaLayan
+namespace lokalayan
 {
     public class Pembeli : Pengguna
     {
         // Private fields tambahan khusus Pembeli
-        private string alamat;
-        private string pembayaran;
+        private string alamat = string.Empty;
+        private string pembayaran = string.Empty;
 
         // Properties tambahan
         public string Alamat
@@ -26,8 +26,8 @@ namespace LokaLayan
         {
         }
 
-        public Pembeli(int idPengguna, string nama, string email, string password, string role, string alamat, string pembayaran) 
-            : base(idPengguna, nama, email, password, role)
+        public Pembeli(int idPengguna, string nama, string email, string password, string alamat, string pembayaran) 
+            : base(idPengguna, nama, email, password)
         {
             this.alamat = alamat;
             this.pembayaran = pembayaran;

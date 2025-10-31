@@ -1,0 +1,10 @@
+C:\Users\Timothy\junprolokal\lokalayan\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Timothy\junprolokal\lokalayan\obj\Debug\net8.0-windows\lokalayan_MarkupCompile.cache
+C:\Users\Timothy\junprolokal\lokalayan\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Timothy\junprolokal\lokalayan\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Timothy\junprolokal\lokalayan\obj\Debug\net8.0-windows\lokalayan.g.resources
+C:\Users\Timothy\junprolokal\lokalayan\obj\Debug\net8.0-windows\lokalayan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Timothy\junprolokal\lokalayan\obj\Debug\net8.0-windows\lokalayan.AssemblyInfoInputs.cache
+C:\Users\Timothy\junprolokal\lokalayan\obj\Debug\net8.0-windows\lokalayan.AssemblyInfo.cs
+C:\Users\Timothy\junprolokal\lokalayan\obj\Debug\net8.0-windows\lokalayan.csproj.CoreCompileInputs.cache
+C:\Users\Timothy\junprolokal\lokalayan\obj\Debug\net8.0-windows\lokalayan.sourcelink.json

@@ -1,13 +1,13 @@
 using System;
 
-namespace LokaLayan
+namespace lokalayan
 {
     public class Produk
     {
         // Private fields
         private int idProduk;
-        private string jenis;
-        private string grade;
+        private string jenis = string.Empty;
+        private string grade = string.Empty;
         private decimal harga;
         private int stok;
         private DateTime tanggalTangkap;

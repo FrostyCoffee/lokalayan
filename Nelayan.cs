@@ -1,12 +1,12 @@
 using System;
 
-namespace LokaLayan
+namespace lokalayan
 {
     public class Nelayan : Pengguna
     {
         // Private fields tambahan khusus Nelayan
         private float rating;
-        private string lokasi;
+        private string lokasi = string.Empty;
 
         // Properties tambahan
         public float Rating
@@ -26,8 +26,8 @@ namespace LokaLayan
         {
         }
 
-        public Nelayan(int idPengguna, string nama, string email, string password, string role, float rating, string lokasi) 
-            : base(idPengguna, nama, email, password, role)
+        public Nelayan(int idPengguna, string nama, string email, string password, float rating, string lokasi) 
+            : base(idPengguna, nama, email, password)
         {
             this.rating = rating;
             this.lokasi = lokasi;
