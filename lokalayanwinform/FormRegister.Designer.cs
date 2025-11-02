@@ -121,6 +121,7 @@
             btnRadioPenjual.TabStop = true;
             btnRadioPenjual.Text = "Klik jika anda mendaftar sebagai penjual";
             btnRadioPenjual.UseVisualStyleBackColor = true;
+            btnRadioPenjual.CheckedChanged += btnRadioPenjual_CheckedChanged;
             // 
             // titleRegistrasi
             // 

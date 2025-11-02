@@ -40,6 +40,7 @@
             txtBoxLokasiNelayan.Name = "txtBoxLokasiNelayan";
             txtBoxLokasiNelayan.Size = new Size(159, 23);
             txtBoxLokasiNelayan.TabIndex = 17;
+            txtBoxLokasiNelayan.TextChanged += txtBoxLokasiNelayan_TextChanged;
             // 
             // btnRegister
             // 
@@ -54,6 +55,7 @@
             btnRegister.TabIndex = 12;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = false;
+            btnRegister.Click += btnRegister_Click;
             // 
             // lblLokasiNelayan
             // 
