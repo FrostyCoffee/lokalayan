@@ -62,6 +62,7 @@
             txtBoxAlamatPembeli.Name = "txtBoxAlamatPembeli";
             txtBoxAlamatPembeli.Size = new Size(159, 23);
             txtBoxAlamatPembeli.TabIndex = 21;
+            txtBoxAlamatPembeli.TextChanged += txtBoxAlamatPembeli_TextChanged;
             // 
             // btnRegister
             // 
@@ -76,6 +77,7 @@
             btnRegister.TabIndex = 20;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = false;
+            btnRegister.Click += btnRegister_Click;
             // 
             // RegisPembeli
             // 

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "xkK/Pu27vaY=",
+  "dgSpecHash": "jA2EZcTTtN4=",
   "success": true,
   "projectFilePath": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\lokalayanwinform.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Felicia\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Felicia\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Felicia\\.nuget\\packages\\npgsql\\9.0.4\\npgsql.9.0.4.nupkg.sha512"
+  ],
   "logs": []
 }
