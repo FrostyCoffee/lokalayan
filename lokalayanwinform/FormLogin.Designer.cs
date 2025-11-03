@@ -30,8 +30,8 @@
         {
             btnLogin = new Button();
             titleLogin = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxEmail = new TextBox();
+            textBoxPass = new TextBox();
             nameLabel = new Label();
             labelPassword = new Label();
             reqQuestin = new Label();
@@ -64,20 +64,20 @@
             titleLogin.Text = "Selamat Datang di LokaLayan";
             titleLogin.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // textBoxEmail
             // 
-            textBox1.Location = new Point(347, 129);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(159, 23);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            textBoxEmail.Location = new Point(347, 129);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(159, 23);
+            textBoxEmail.TabIndex = 2;
+            textBoxEmail.TextChanged += textBox1_TextChanged;
             // 
-            // textBox2
+            // textBoxPass
             // 
-            textBox2.Location = new Point(347, 170);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(159, 23);
-            textBox2.TabIndex = 3;
+            textBoxPass.Location = new Point(347, 170);
+            textBoxPass.Name = "textBoxPass";
+            textBoxPass.Size = new Size(159, 23);
+            textBoxPass.TabIndex = 3;
             // 
             // nameLabel
             // 
@@ -135,8 +135,8 @@
             Controls.Add(reqQuestin);
             Controls.Add(labelPassword);
             Controls.Add(nameLabel);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxPass);
+            Controls.Add(textBoxEmail);
             Controls.Add(titleLogin);
             Controls.Add(btnLogin);
             Name = "FormLogin";
@@ -149,8 +149,8 @@
 
         private Button btnLogin;
         private Label titleLogin;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textBoxEmail;
+        private TextBox textBoxPass;
         private Label nameLabel;
         private Label labelPassword;
         private Label reqQuestin;

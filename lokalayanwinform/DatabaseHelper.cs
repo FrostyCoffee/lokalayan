@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 using Npgsql;
 
 namespace lokalayanwinform
@@ -51,7 +52,7 @@ namespace lokalayanwinform
                 }
             }
         }
-        public void RegisterPembeli (Pembeli pembeli)
+        public void RegisterPembeli(Pembeli pembeli)
         {
             using (var connection = new NpgsqlConnection(connectionString))
             {
@@ -66,4 +67,45 @@ namespace lokalayanwinform
             }
 
         }
+        public Pengguna GetPenggunaByEmail(string email)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT \"idPengguna\", nama, password, email FROM \"Pengguna\" WHERE email = @email";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("email", email);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Pengguna
+                            {
+                                IdPengguna = reader.GetInt32(0),
+                                Nama = reader.GetString(1),
+                                Password = reader.GetString(2),
+                                Email = reader.GetString(3)
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        } 
+        public bool IsUserNelayan(int idPengguna)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM \"Nelayan\" WHERE \"idPengguna\" = @idPengguna";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("idPengguna", idPengguna);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+    }   
 }

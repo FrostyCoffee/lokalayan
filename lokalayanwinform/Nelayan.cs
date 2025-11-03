@@ -8,11 +8,8 @@ namespace lokalayanwinform
 {
     public class Nelayan : Pengguna
     {
-        // Private fields tambahan khusus Nelayan
         private float rating;
         private string lokasi = string.Empty;
-
-        // Properties tambahan
         public float Rating
         {
             get { return rating; }

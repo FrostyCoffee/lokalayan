@@ -8,11 +8,8 @@ namespace lokalayanwinform
 {
     public class Pembeli : Pengguna
     {
-        // Private fields tambahan khusus Pembeli
         private string alamat = string.Empty;
         private string pembayaran = string.Empty;
-
-        // Properties tambahan
         public string Alamat
         {
             get { return alamat; }
