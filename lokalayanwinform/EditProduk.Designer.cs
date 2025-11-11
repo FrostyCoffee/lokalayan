@@ -41,8 +41,11 @@
             textBoxHarga = new TextBox();
             textBoxStok = new TextBox();
             textBoxTanggal = new TextBox();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dtgrProduk = new DataGridView();
+            btnTambahProduk = new Button();
+            btnPerbarahuiProduk = new Button();
+            btnHapusProduk = new Button();
+            ((System.ComponentModel.ISupportInitialize)dtgrProduk).BeginInit();
             SuspendLayout();
             // 
             // titleEdit
@@ -158,20 +161,65 @@
             textBoxTanggal.Size = new Size(100, 23);
             textBoxTanggal.TabIndex = 12;
             // 
-            // dataGridView1
+            // dtgrProduk
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(66, 307);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(662, 131);
-            dataGridView1.TabIndex = 13;
+            dtgrProduk.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgrProduk.Location = new Point(66, 307);
+            dtgrProduk.Name = "dtgrProduk";
+            dtgrProduk.Size = new Size(662, 131);
+            dtgrProduk.TabIndex = 13;
+            // 
+            // btnTambahProduk
+            // 
+            btnTambahProduk.BackColor = Color.Turquoise;
+            btnTambahProduk.FlatAppearance.BorderSize = 0;
+            btnTambahProduk.FlatStyle = FlatStyle.Flat;
+            btnTambahProduk.Font = new Font("Montserrat", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTambahProduk.Location = new Point(396, 133);
+            btnTambahProduk.Name = "btnTambahProduk";
+            btnTambahProduk.Size = new Size(90, 90);
+            btnTambahProduk.TabIndex = 14;
+            btnTambahProduk.Text = "Tambah";
+            btnTambahProduk.UseVisualStyleBackColor = false;
+            btnTambahProduk.Click += btnTambahProduk_Click;
+            // 
+            // btnPerbarahuiProduk
+            // 
+            btnPerbarahuiProduk.BackColor = Color.Turquoise;
+            btnPerbarahuiProduk.FlatAppearance.BorderSize = 0;
+            btnPerbarahuiProduk.FlatStyle = FlatStyle.Flat;
+            btnPerbarahuiProduk.Font = new Font("Montserrat", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPerbarahuiProduk.ForeColor = SystemColors.ControlText;
+            btnPerbarahuiProduk.Location = new Point(520, 135);
+            btnPerbarahuiProduk.Name = "btnPerbarahuiProduk";
+            btnPerbarahuiProduk.Size = new Size(90, 90);
+            btnPerbarahuiProduk.TabIndex = 15;
+            btnPerbarahuiProduk.Text = "Perbaharui";
+            btnPerbarahuiProduk.UseVisualStyleBackColor = false;
+            // 
+            // btnHapusProduk
+            // 
+            btnHapusProduk.BackColor = Color.Turquoise;
+            btnHapusProduk.FlatAppearance.BorderSize = 0;
+            btnHapusProduk.FlatStyle = FlatStyle.Flat;
+            btnHapusProduk.Font = new Font("Montserrat", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnHapusProduk.Location = new Point(638, 133);
+            btnHapusProduk.Name = "btnHapusProduk";
+            btnHapusProduk.Size = new Size(90, 90);
+            btnHapusProduk.TabIndex = 16;
+            btnHapusProduk.Text = "Hapus";
+            btnHapusProduk.UseVisualStyleBackColor = false;
+            btnHapusProduk.Click += btnHapusProduk_Click;
             // 
             // EditProduk
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(btnHapusProduk);
+            Controls.Add(btnPerbarahuiProduk);
+            Controls.Add(btnTambahProduk);
+            Controls.Add(dtgrProduk);
             Controls.Add(textBoxTanggal);
             Controls.Add(textBoxStok);
             Controls.Add(textBoxHarga);
@@ -187,7 +235,7 @@
             Controls.Add(titleEdit);
             Name = "EditProduk";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgrProduk).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -207,6 +255,9 @@
         private TextBox textBoxHarga;
         private TextBox textBoxStok;
         private TextBox textBoxTanggal;
-        private DataGridView dataGridView1;
+        private DataGridView dtgrProduk;
+        private Button btnTambahProduk;
+        private Button btnPerbarahuiProduk;
+        private Button btnHapusProduk;
     }
 }

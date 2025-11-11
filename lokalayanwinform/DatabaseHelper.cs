@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Net.NetworkInformation;
 using System.Security.Cryptography;
 using Npgsql;
 
@@ -6,8 +8,92 @@ namespace lokalayanwinform
 {
     public class DatabaseHelper
     {
+        public static class Session
+        {
+            public static int idPengguna { get; set; }
+            public static int? idNelayan { get; set; }
+        }
         private string connectionString = "Host=db.lxnnlskblsgipoymabyj.supabase.co;Port=5432;Database=postgres;Username=postgres;Password=nelayan123lmao;SSL Mode=Require;Trust Server Certificate=true;";
 
+        public int? GetidNelayanbyidPengguna(int idPengguna)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT \"idNelayan\" FROM \"Nelayan\" WHERE \"idPengguna\" = @idPengguna";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("idPengguna", idPengguna);
+                    object result = cmd.ExecuteScalar();
+                    return result != null ? (int?)result : null;
+                }
+            }
+        }
+            public DataTable GetAllProduk(int idNelayan)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT kategori, jenis, grade, harga, stok, tanggalTangkap  FROM Produk";
+                using (var adapter = new NpgsqlDataAdapter(query, connection))
+                {
+                    adapter.SelectCommand.Parameters.AddWithValue("idNelayan", idNelayan);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+        public void AddProduk(string kategori, string jenis, string grade, int harga, int stok, int tanggalTangkap)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "INSERT INTO Produk (kategori, jenis, grade, harga, stok, tanggalTangkap) VALUES (@kategori, @jenis, @grade, @harga, @stok, @tanggalTangkap)";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("kategori", kategori);
+                    cmd.Parameters.AddWithValue("jenis", jenis);
+                    cmd.Parameters.AddWithValue("grade", grade);
+                    cmd.Parameters.AddWithValue("harga", harga);
+                    cmd.Parameters.AddWithValue("stok", stok);
+                    cmd.Parameters.AddWithValue("tanggalTangkap", tanggalTangkap);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        public void UpdateProduk(int idProduk, string kategori, string jenis, string grade, int harga, int stok, int tanggalTangkap)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "UPDATE Produk SET kategori = @kategori, jenis = @jenis, grade = @grade, harga=@harga, stok=@stok, tanggalTangkap=@tanggalTangkap WHERE idProduk = @idProduk";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("id", idProduk);
+                    cmd.Parameters.AddWithValue("kategori", kategori);
+                    cmd.Parameters.AddWithValue("jenis", jenis);
+                    cmd.Parameters.AddWithValue("grade", grade);
+                    cmd.Parameters.AddWithValue("harga", harga);
+                    cmd.Parameters.AddWithValue("stok", stok);
+                    cmd.Parameters.AddWithValue("tanggalTangkap", tanggalTangkap);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        public void DeleteProduk(int idProduk)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "DELETE FROM Produk WHERE idProduk = @idProduk";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("idProduk", idProduk);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
         public void TestConnection()
         {
             try
