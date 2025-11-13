@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Net.NetworkInformation;
+using System.Reflection;
 using System.Security.Cryptography;
 using Npgsql;
 
@@ -14,6 +15,48 @@ namespace lokalayanwinform
             public static int? idNelayan { get; set; }
         }
         private string connectionString = "Host=db.lxnnlskblsgipoymabyj.supabase.co;Port=5432;Database=postgres;Username=postgres;Password=nelayan123lmao;SSL Mode=Require;Trust Server Certificate=true;";
+        public int GetTotalPesanan(int idNelayan)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COALESCE(SUM(dp.jumlah), 0) " +
+               "FROM \"detailPesanan\" dp " +
+               "INNER JOIN \"Produk\" p ON dp.\"idProduk\" = p.\"idProduk\" " +
+               "WHERE p.\"idNelayan\" = @idNelayan";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("idNelayan", idNelayan);
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+        public int GetTotalStok(int idNelayan)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COALESCE(SUM(stok), 0) FROM \"Produk\" WHERE \"idNelayan\" = @idNelayan";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("idNelayan", idNelayan);
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+        public int GetJumlahProduk(int idNelayan)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM \"Produk\" WHERE \"idNelayan\" = @idNelayan";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("idNelayan", idNelayan);
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
 
         public int? GetidNelayanbyidPengguna(int idPengguna)
         {
@@ -34,7 +77,7 @@ namespace lokalayanwinform
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT kategori, jenis, grade, harga, stok, tanggalTangkap  FROM Produk";
+                string query = "SELECT idProduk, kategori, jenis, grade, harga, stok, tanggalTangkap  FROM Produk";
                 using (var adapter = new NpgsqlDataAdapter(query, connection))
                 {
                     adapter.SelectCommand.Parameters.AddWithValue("idNelayan", idNelayan);
