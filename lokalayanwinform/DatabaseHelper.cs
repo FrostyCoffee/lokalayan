@@ -3,6 +3,7 @@ using System.Data;
 using System.Net.NetworkInformation;
 using System.Reflection;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 using Npgsql;
 
 namespace lokalayanwinform
@@ -15,6 +16,66 @@ namespace lokalayanwinform
             public static int? idNelayan { get; set; }
         }
         private string connectionString = "Host=db.lxnnlskblsgipoymabyj.supabase.co;Port=5432;Database=postgres;Username=postgres;Password=nelayan123lmao;SSL Mode=Require;Trust Server Certificate=true;";
+        public void UpdateStockInDatabase(int newStock, int idProduk)
+        {
+            try
+            {
+                using (var connection = new NpgsqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "UPDATE \"Produk\" SET \"stok\" = @stok WHERE \"idProduk\" = @idProduk";
+                    using (var cmd = new NpgsqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("stok", newStock);
+                        cmd.Parameters.AddWithValue("idProduk", idProduk);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Gagal memperbarui stok: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public DataRow GetProductById(int idProduk)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM \"Produk\" WHERE \"idProduk\" = @idProduk";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("idProduk", idProduk);
+                    using (var adapter = new NpgsqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        if (dt.Rows.Count > 0)
+                        {
+                            return dt.Rows[0]; // Return the first row
+                        }
+                        else
+                        {
+                            throw new Exception("Produk tidak ditemukan.");
+                        }
+                    }
+                }
+            }
+        }
+        public DataTable KatalogProduk()
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT kategori, jenis, harga FROM \"Produk\"";
+                using (var adapter = new NpgsqlDataAdapter(query, connection))
+                {
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
         public int GetTotalPesanan(int idNelayan)
         {
             using (var connection = new NpgsqlConnection(connectionString))

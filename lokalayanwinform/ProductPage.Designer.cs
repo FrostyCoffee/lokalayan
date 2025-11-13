@@ -29,22 +29,19 @@
         private void InitializeComponent()
         {
             btnKembaliProduk = new Button();
-            pictureBox1 = new PictureBox();
             titleProduk = new Label();
-            lblSpesifikasiProduk = new Label();
-            lblJenis = new Label();
-            lblKategoriProduk = new Label();
+            titleKategori = new Label();
             lblGradeProduk = new Label();
             lblHargaProduk = new Label();
             lblTanggalTangkap = new Label();
-            lblDeskripsiProduk = new Label();
-            lblDeskripsiProdukPanjang = new Label();
             btnBeliProduk = new Button();
             lblStok = new Label();
             counterStokProduk = new Label();
             lblJumlahBeli = new Label();
             textBoxJumlahBeli = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            fillGrade = new Label();
+            fillTanggal = new Label();
+            titleJenis = new Label();
             SuspendLayout();
             // 
             // btnKembaliProduk
@@ -60,64 +57,35 @@
             btnKembaliProduk.Text = "Kembali";
             btnKembaliProduk.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(46, 116);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(141, 210);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
             // titleProduk
             // 
             titleProduk.AutoSize = true;
             titleProduk.Font = new Font("Montserrat", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             titleProduk.Location = new Point(210, 116);
             titleProduk.Name = "titleProduk";
-            titleProduk.Size = new Size(345, 26);
+            titleProduk.Size = new Size(0, 26);
             titleProduk.TabIndex = 2;
-            titleProduk.Text = "Ikan Layang origininal rasa manis";
             titleProduk.TextAlign = ContentAlignment.MiddleLeft;
+            titleProduk.Click += titleProduk_Click;
             // 
-            // lblSpesifikasiProduk
+            // titleKategori
             // 
-            lblSpesifikasiProduk.AutoSize = true;
-            lblSpesifikasiProduk.BackColor = Color.Turquoise;
-            lblSpesifikasiProduk.FlatStyle = FlatStyle.Flat;
-            lblSpesifikasiProduk.Font = new Font("Montserrat", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblSpesifikasiProduk.Location = new Point(210, 184);
-            lblSpesifikasiProduk.Name = "lblSpesifikasiProduk";
-            lblSpesifikasiProduk.Size = new Size(74, 16);
-            lblSpesifikasiProduk.TabIndex = 3;
-            lblSpesifikasiProduk.Text = "Spesifikasi";
-            // 
-            // lblJenis
-            // 
-            lblJenis.AutoSize = true;
-            lblJenis.Font = new Font("Montserrat Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblJenis.Location = new Point(210, 213);
-            lblJenis.Name = "lblJenis";
-            lblJenis.Size = new Size(37, 16);
-            lblJenis.TabIndex = 4;
-            lblJenis.Text = "Jenis";
-            // 
-            // lblKategoriProduk
-            // 
-            lblKategoriProduk.AutoSize = true;
-            lblKategoriProduk.Font = new Font("Montserrat Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblKategoriProduk.Location = new Point(210, 229);
-            lblKategoriProduk.Name = "lblKategoriProduk";
-            lblKategoriProduk.Size = new Size(59, 16);
-            lblKategoriProduk.TabIndex = 5;
-            lblKategoriProduk.Text = "Kategori";
+            titleKategori.AutoSize = true;
+            titleKategori.Font = new Font("Montserrat", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            titleKategori.Location = new Point(64, 104);
+            titleKategori.MaximumSize = new Size(500, 500);
+            titleKategori.Name = "titleKategori";
+            titleKategori.Size = new Size(168, 29);
+            titleKategori.TabIndex = 5;
+            titleKategori.Text = "[Kategori Ikan]";
             // 
             // lblGradeProduk
             // 
             lblGradeProduk.AutoSize = true;
-            lblGradeProduk.Font = new Font("Montserrat Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblGradeProduk.Location = new Point(210, 245);
+            lblGradeProduk.Font = new Font("Montserrat", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblGradeProduk.Location = new Point(64, 260);
             lblGradeProduk.Name = "lblGradeProduk";
-            lblGradeProduk.Size = new Size(42, 16);
+            lblGradeProduk.Size = new Size(57, 22);
             lblGradeProduk.TabIndex = 6;
             lblGradeProduk.Text = "Grade";
             // 
@@ -134,37 +102,18 @@
             // lblTanggalTangkap
             // 
             lblTanggalTangkap.AutoSize = true;
-            lblTanggalTangkap.Font = new Font("Montserrat Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTanggalTangkap.Location = new Point(210, 261);
+            lblTanggalTangkap.Font = new Font("Montserrat", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTanggalTangkap.Location = new Point(64, 289);
             lblTanggalTangkap.Name = "lblTanggalTangkap";
-            lblTanggalTangkap.Size = new Size(110, 16);
+            lblTanggalTangkap.Size = new Size(148, 22);
             lblTanggalTangkap.TabIndex = 8;
             lblTanggalTangkap.Text = "Tanggal Tangkap";
-            // 
-            // lblDeskripsiProduk
-            // 
-            lblDeskripsiProduk.AutoSize = true;
-            lblDeskripsiProduk.BackColor = Color.Turquoise;
-            lblDeskripsiProduk.Font = new Font("Montserrat", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDeskripsiProduk.Location = new Point(210, 294);
-            lblDeskripsiProduk.Name = "lblDeskripsiProduk";
-            lblDeskripsiProduk.Size = new Size(66, 16);
-            lblDeskripsiProduk.TabIndex = 9;
-            lblDeskripsiProduk.Text = "Deskripsi";
-            // 
-            // lblDeskripsiProdukPanjang
-            // 
-            lblDeskripsiProdukPanjang.AutoSize = true;
-            lblDeskripsiProdukPanjang.Font = new Font("Montserrat Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDeskripsiProdukPanjang.Location = new Point(210, 322);
-            lblDeskripsiProdukPanjang.Name = "lblDeskripsiProdukPanjang";
-            lblDeskripsiProdukPanjang.Size = new Size(175, 16);
-            lblDeskripsiProdukPanjang.TabIndex = 10;
-            lblDeskripsiProdukPanjang.Text = "Lorem ipsum dolor sit amet";
             // 
             // btnBeliProduk
             // 
             btnBeliProduk.BackColor = Color.Turquoise;
+            btnBeliProduk.FlatAppearance.BorderSize = 0;
+            btnBeliProduk.FlatStyle = FlatStyle.Flat;
             btnBeliProduk.Font = new Font("Montserrat", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBeliProduk.Location = new Point(606, 283);
             btnBeliProduk.Name = "btnBeliProduk";
@@ -172,6 +121,7 @@
             btnBeliProduk.TabIndex = 11;
             btnBeliProduk.Text = "Beli";
             btnBeliProduk.UseVisualStyleBackColor = false;
+            btnBeliProduk.Click += btnBeliProduk_Click;
             // 
             // lblStok
             // 
@@ -210,30 +160,58 @@
             textBoxJumlahBeli.Size = new Size(28, 23);
             textBoxJumlahBeli.TabIndex = 15;
             // 
+            // fillGrade
+            // 
+            fillGrade.AutoSize = true;
+            fillGrade.Font = new Font("Montserrat", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            fillGrade.Location = new Point(248, 260);
+            fillGrade.Name = "fillGrade";
+            fillGrade.Size = new Size(70, 22);
+            fillGrade.TabIndex = 16;
+            fillGrade.Text = "[grade]";
+            fillGrade.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // fillTanggal
+            // 
+            fillTanggal.AutoSize = true;
+            fillTanggal.Font = new Font("Montserrat", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            fillTanggal.Location = new Point(248, 289);
+            fillTanggal.Name = "fillTanggal";
+            fillTanggal.Size = new Size(163, 22);
+            fillTanggal.TabIndex = 17;
+            fillTanggal.Text = "[tanggal tangkap]";
+            // 
+            // titleJenis
+            // 
+            titleJenis.AutoSize = true;
+            titleJenis.Font = new Font("Montserrat", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            titleJenis.Location = new Point(64, 148);
+            titleJenis.Name = "titleJenis";
+            titleJenis.Size = new Size(125, 44);
+            titleJenis.TabIndex = 18;
+            titleJenis.Text = "[jenis]";
+            // 
             // ProductPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(titleJenis);
+            Controls.Add(fillTanggal);
+            Controls.Add(fillGrade);
             Controls.Add(textBoxJumlahBeli);
             Controls.Add(lblJumlahBeli);
             Controls.Add(counterStokProduk);
             Controls.Add(lblStok);
             Controls.Add(btnBeliProduk);
-            Controls.Add(lblDeskripsiProdukPanjang);
-            Controls.Add(lblDeskripsiProduk);
             Controls.Add(lblTanggalTangkap);
             Controls.Add(lblHargaProduk);
             Controls.Add(lblGradeProduk);
-            Controls.Add(lblKategoriProduk);
-            Controls.Add(lblJenis);
-            Controls.Add(lblSpesifikasiProduk);
+            Controls.Add(titleKategori);
             Controls.Add(titleProduk);
-            Controls.Add(pictureBox1);
             Controls.Add(btnKembaliProduk);
             Name = "ProductPage";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -241,20 +219,20 @@
         #endregion
 
         private Button btnKembaliProduk;
-        private PictureBox pictureBox1;
         private Label titleProduk;
         private Label lblSpesifikasiProduk;
         private Label lblJenis;
-        private Label lblKategoriProduk;
+        private Label titleKategori;
         private Label lblGradeProduk;
         private Label lblHargaProduk;
         private Label lblTanggalTangkap;
-        private Label lblDeskripsiProduk;
-        private Label lblDeskripsiProdukPanjang;
         private Button btnBeliProduk;
         private Label lblStok;
         private Label counterStokProduk;
         private Label lblJumlahBeli;
         private TextBox textBoxJumlahBeli;
+        private Label fillGrade;
+        private Label fillTanggal;
+        private Label titleJenis;
     }
 }

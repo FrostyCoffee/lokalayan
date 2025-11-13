@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             titleDashboardPenjual = new Label();
-            labelTotalJual = new Label();
+            labelTotalPesan = new Label();
             lblTotalStock = new Label();
             lblJumlahProduk = new Label();
-            counterTotalJual = new Label();
+            counterTotalPesanan = new Label();
             counterTotalStok = new Label();
-            label1 = new Label();
+            counterJumlahProduk = new Label();
             btnEditProduk = new Button();
             btnCekStok = new Button();
             SuspendLayout();
@@ -49,15 +49,15 @@
             titleDashboardPenjual.TabIndex = 0;
             titleDashboardPenjual.Text = "Dashboard Penjualan";
             // 
-            // labelTotalJual
+            // labelTotalPesan
             // 
-            labelTotalJual.AutoSize = true;
-            labelTotalJual.Font = new Font("Montserrat Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelTotalJual.Location = new Point(305, 128);
-            labelTotalJual.Name = "labelTotalJual";
-            labelTotalJual.Size = new Size(99, 16);
-            labelTotalJual.TabIndex = 1;
-            labelTotalJual.Text = "Total Penjualan";
+            labelTotalPesan.AutoSize = true;
+            labelTotalPesan.Font = new Font("Montserrat Medium", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelTotalPesan.Location = new Point(305, 128);
+            labelTotalPesan.Name = "labelTotalPesan";
+            labelTotalPesan.Size = new Size(91, 16);
+            labelTotalPesan.TabIndex = 1;
+            labelTotalPesan.Text = "Total Pesanan";
             // 
             // lblTotalStock
             // 
@@ -79,15 +79,15 @@
             lblJumlahProduk.TabIndex = 3;
             lblJumlahProduk.Text = "Jumlah Produk";
             // 
-            // counterTotalJual
+            // counterTotalPesanan
             // 
-            counterTotalJual.AutoSize = true;
-            counterTotalJual.Font = new Font("Montserrat", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            counterTotalJual.Location = new Point(475, 128);
-            counterTotalJual.Name = "counterTotalJual";
-            counterTotalJual.Size = new Size(23, 16);
-            counterTotalJual.TabIndex = 4;
-            counterTotalJual.Text = "00";
+            counterTotalPesanan.AutoSize = true;
+            counterTotalPesanan.Font = new Font("Montserrat", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            counterTotalPesanan.Location = new Point(475, 128);
+            counterTotalPesanan.Name = "counterTotalPesanan";
+            counterTotalPesanan.Size = new Size(23, 16);
+            counterTotalPesanan.TabIndex = 4;
+            counterTotalPesanan.Text = "00";
             // 
             // counterTotalStok
             // 
@@ -99,15 +99,15 @@
             counterTotalStok.TabIndex = 5;
             counterTotalStok.Text = "00";
             // 
-            // label1
+            // counterJumlahProduk
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Montserrat", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(475, 185);
-            label1.Name = "label1";
-            label1.Size = new Size(23, 16);
-            label1.TabIndex = 6;
-            label1.Text = "00";
+            counterJumlahProduk.AutoSize = true;
+            counterJumlahProduk.Font = new Font("Montserrat", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            counterJumlahProduk.Location = new Point(475, 185);
+            counterJumlahProduk.Name = "counterJumlahProduk";
+            counterJumlahProduk.Size = new Size(23, 16);
+            counterJumlahProduk.TabIndex = 6;
+            counterJumlahProduk.Text = "00";
             // 
             // btnEditProduk
             // 
@@ -143,12 +143,12 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnCekStok);
             Controls.Add(btnEditProduk);
-            Controls.Add(label1);
+            Controls.Add(counterJumlahProduk);
             Controls.Add(counterTotalStok);
-            Controls.Add(counterTotalJual);
+            Controls.Add(counterTotalPesanan);
             Controls.Add(lblJumlahProduk);
             Controls.Add(lblTotalStock);
-            Controls.Add(labelTotalJual);
+            Controls.Add(labelTotalPesan);
             Controls.Add(titleDashboardPenjual);
             Name = "DashboardPenjual";
             Text = "Form1";
@@ -159,12 +159,12 @@
         #endregion
 
         private Label titleDashboardPenjual;
-        private Label labelTotalJual;
+        private Label labelTotalPesan;
         private Label lblTotalStock;
         private Label lblJumlahProduk;
-        private Label counterTotalJual;
+        private Label counterTotalPesanan;
         private Label counterTotalStok;
-        private Label label1;
+        private Label counterJumlahProduk;
         private Button btnEditProduk;
         private Button btnCekStok;
     }

@@ -196,6 +196,7 @@
             btnPerbarahuiProduk.TabIndex = 15;
             btnPerbarahuiProduk.Text = "Perbaharui";
             btnPerbarahuiProduk.UseVisualStyleBackColor = false;
+            btnPerbarahuiProduk.Click += btnPerbarahuiProduk_Click;
             // 
             // btnHapusProduk
             // 
