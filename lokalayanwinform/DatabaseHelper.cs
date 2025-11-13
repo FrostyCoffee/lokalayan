@@ -213,7 +213,7 @@ namespace lokalayanwinform
                 Console.WriteLine($"Error connecting to database: {ex.Message}");
             }
         }
-        public int RegisterUser(Pengguna pengguna)
+        public int RegisterUser(string nama, string password, string email)
         {
             using (var connection = new NpgsqlConnection(connectionString))
             {
@@ -221,14 +221,14 @@ namespace lokalayanwinform
                 string query = "INSERT INTO \"Pengguna\" (nama, password, email) VALUES (@nama, @password, @email) RETURNING \"idPengguna\"";
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("nama", pengguna.Nama);
-                    cmd.Parameters.AddWithValue("password", pengguna.Password);
-                    cmd.Parameters.AddWithValue("email", pengguna.Email);
+                    cmd.Parameters.AddWithValue("nama", nama);
+                    cmd.Parameters.AddWithValue("password", password);
+                    cmd.Parameters.AddWithValue("email", email);
                     return (int)cmd.ExecuteScalar();
                 }
             }
         }
-        public void RegisterNelayan(Nelayan nelayan)
+        public void RegisterNelayan(int idPengguna, string lokasi)
         {
             using (var connection = new NpgsqlConnection(connectionString))
             {
@@ -236,13 +236,13 @@ namespace lokalayanwinform
                 string query = "INSERT INTO \"Nelayan\" (\"idPengguna\", lokasi) VALUES (@\"idPengguna\", @lokasi)";
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("\"idPengguna\"", nelayan.IdPengguna);
-                    cmd.Parameters.AddWithValue("lokasi", nelayan.Lokasi);
+                    cmd.Parameters.AddWithValue("\"idPengguna\"", idPengguna);
+                    cmd.Parameters.AddWithValue("lokasi", lokasi);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
-        public void RegisterPembeli(Pembeli pembeli)
+        public void RegisterPembeli(int idPengguna,string alamat)
         {
             using (var connection = new NpgsqlConnection(connectionString))
             {
@@ -250,14 +250,14 @@ namespace lokalayanwinform
                 string query = "INSERT INTO \"Pembeli\" (\"idPengguna\", alamat) VALUES (@\"idPengguna\", @alamat)";
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("\"idPengguna\"", pembeli.IdPengguna);
-                    cmd.Parameters.AddWithValue("alamat", pembeli.Alamat);
+                    cmd.Parameters.AddWithValue("\"idPengguna\"", idPengguna);
+                    cmd.Parameters.AddWithValue("alamat", alamat);
                     cmd.ExecuteNonQuery();
                 }
             }
 
         }
-        public Pengguna GetPenggunaByEmail(string email)
+        public Dictionary<string, object> GetPenggunaByEmail(string email)
         {
             using (var connection = new NpgsqlConnection(connectionString))
             {
@@ -270,19 +270,19 @@ namespace lokalayanwinform
                     {
                         if (reader.Read())
                         {
-                            return new Pengguna
-                            {
-                                IdPengguna = reader.GetInt32(0),
-                                Nama = reader.GetString(1),
-                                Password = reader.GetString(2),
-                                Email = reader.GetString(3)
-                            };
+                            return new Dictionary<string, object>
+                    {
+                        { "idPengguna", reader.GetInt32(0) },
+                        { "nama", reader.GetString(1) },
+                        { "password", reader.GetString(2) },
+                        { "email", reader.GetString(3) }
+                    };
                         }
                     }
                 }
             }
             return null;
-        } 
+        }
         public bool IsUserNelayan(int idPengguna)
         {
             using (var connection = new NpgsqlConnection(connectionString))

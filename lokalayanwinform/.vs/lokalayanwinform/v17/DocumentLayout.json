@@ -3,40 +3,40 @@
   "WorkspaceRootPath": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\editproduk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:editproduk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\editproduk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:editproduk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\katalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:katalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\katalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:katalog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\pembayaran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:pembayaran.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\dashboardpenjual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:dashboardpenjual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\nelayan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:nelayan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\dashboardpenjual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:dashboardpenjual.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\editproduk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:editproduk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\regisnelayan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,14 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\produk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:produk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\pesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:pesanan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|c:\\lokalayanfix\\lokalayan\\lokalayanwinform\\pengiriman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41CC28AA-58F2-4BFD-AB03-898FCFFE0CFF}|lokalayanwinform.csproj|solutionrelative:pengiriman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -85,18 +77,43 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductPage.cs [Design]",
+              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\ProductPage.cs",
+              "RelativeDocumentMoniker": "ProductPage.cs",
+              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\ProductPage.cs [Design]",
+              "RelativeToolTip": "ProductPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T09:54:08.428Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductPage.cs",
+              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\ProductPage.cs",
+              "RelativeDocumentMoniker": "ProductPage.cs",
+              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\ProductPage.cs",
+              "RelativeToolTip": "ProductPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T09:49:00.822Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DatabaseHelper.cs",
               "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "DatabaseHelper.cs",
               "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\DatabaseHelper.cs",
               "RelativeToolTip": "DatabaseHelper.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAQwBgAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAIwBoBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T02:51:35.03Z",
               "EditorCaption": ""
@@ -104,78 +121,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormLogin.cs",
-              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\FormLogin.cs",
-              "RelativeDocumentMoniker": "FormLogin.cs",
-              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\FormLogin.cs",
-              "RelativeToolTip": "FormLogin.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAuwEEAAAAbAAAAAAAAAA==",
+              "Title": "Katalog.cs [Design]",
+              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Katalog.cs",
+              "RelativeDocumentMoniker": "Katalog.cs",
+              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Katalog.cs [Design]",
+              "RelativeToolTip": "Katalog.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T14:35:52.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EditProduk.cs",
-              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\EditProduk.cs",
-              "RelativeDocumentMoniker": "EditProduk.cs",
-              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\EditProduk.cs",
-              "RelativeToolTip": "EditProduk.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwEEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T13:31:21.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditProduk.cs [Design]",
-              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\EditProduk.cs",
-              "RelativeDocumentMoniker": "EditProduk.cs",
-              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\EditProduk.cs [Design]",
-              "RelativeToolTip": "EditProduk.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T02:56:42.067Z",
+              "WhenOpened": "2025-11-13T06:54:57.383Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Pembayaran.cs",
-              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Pembayaran.cs",
-              "RelativeDocumentMoniker": "Pembayaran.cs",
-              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Pembayaran.cs",
-              "RelativeToolTip": "Pembayaran.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
+              "Title": "Katalog.cs",
+              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Katalog.cs",
+              "RelativeDocumentMoniker": "Katalog.cs",
+              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Katalog.cs",
+              "RelativeToolTip": "Katalog.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T05:36:18.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DashboardPenjual.cs",
-              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\DashboardPenjual.cs",
-              "RelativeDocumentMoniker": "DashboardPenjual.cs",
-              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\DashboardPenjual.cs",
-              "RelativeToolTip": "DashboardPenjual.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T02:56:09.99Z",
+              "WhenOpened": "2025-11-13T07:02:43.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Nelayan.cs",
-              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Nelayan.cs",
-              "RelativeDocumentMoniker": "Nelayan.cs",
-              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Nelayan.cs",
-              "RelativeToolTip": "Nelayan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAJAAAAAAAAAA==",
+              "Title": "DashboardPenjual.cs",
+              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\DashboardPenjual.cs",
+              "RelativeDocumentMoniker": "DashboardPenjual.cs",
+              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\DashboardPenjual.cs",
+              "RelativeToolTip": "DashboardPenjual.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwCIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T03:27:21.337Z",
+              "WhenOpened": "2025-11-10T02:56:09.99Z",
               "EditorCaption": ""
             },
             {
@@ -187,19 +165,34 @@
               "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\DashboardPenjual.cs [Design]",
               "RelativeToolTip": "DashboardPenjual.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T02:50:09.669Z"
+              "WhenOpened": "2025-11-10T02:50:09.669Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormLogin.cs",
+              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\FormLogin.cs",
+              "RelativeDocumentMoniker": "FormLogin.cs",
+              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\FormLogin.cs",
+              "RelativeToolTip": "FormLogin.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T14:35:52.863Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "FormLogin.cs [Design]",
-              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\FormLogin.cs",
-              "RelativeDocumentMoniker": "FormLogin.cs",
-              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\FormLogin.cs [Design]",
-              "RelativeToolTip": "FormLogin.cs [Design]",
+              "Title": "EditProduk.cs",
+              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\EditProduk.cs",
+              "RelativeDocumentMoniker": "EditProduk.cs",
+              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\EditProduk.cs",
+              "RelativeToolTip": "EditProduk.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T12:15:58.951Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-11T13:31:21.055Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -284,30 +277,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-31T05:40:28.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Pesanan.cs",
-              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Pesanan.cs",
-              "RelativeDocumentMoniker": "Pesanan.cs",
-              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Pesanan.cs",
-              "RelativeToolTip": "Pesanan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T05:39:49.176Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Pengiriman.cs",
-              "DocumentMoniker": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Pengiriman.cs",
-              "RelativeDocumentMoniker": "Pengiriman.cs",
-              "ToolTip": "C:\\lokalayanfix\\lokalayan\\lokalayanwinform\\Pengiriman.cs",
-              "RelativeToolTip": "Pengiriman.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T05:39:05.781Z"
             }
           ]
         }
