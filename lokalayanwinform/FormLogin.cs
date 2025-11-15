@@ -60,22 +60,23 @@ namespace lokalayanwinform
             {
                 DatabaseHelper dbHelper = new DatabaseHelper();
                 var pengguna = dbHelper.GetPenggunaByEmail(email);
-                if (pengguna == null || pengguna.Password != password)
+                if (pengguna == null || pengguna["password"].ToString() != password)
                 {
                     MessageBox.Show("Email atau password salah.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                Session.idPengguna = pengguna.idPengguna;
-                bool isNelayan = dbHelper.IsUserNelayan(pengguna.idPengguna);
+                Session.idPengguna = Convert.ToInt32(pengguna["idPengguna"]);
+                bool isNelayan = dbHelper.IsUserNelayan(Session.idPengguna);
                 if (isNelayan)
                 {
-                    Session.idNelayan = dbHelper.GetidNelayanbyidPengguna(pengguna.idPengguna)
+                    Session.idNelayan = dbHelper.GetidNelayanbyidPengguna(Session.idPengguna);
                     DashboardPenjual dashboardPenjual = new DashboardPenjual();
                     dashboardPenjual.Show();
                 }
                 else
                 {
+                    Session.idPembeli = dbHelper.GetidPembelibyidPengguna(Session.idPengguna);
                     Katalog dashboardPembeli = new Katalog();
                     dashboardPembeli.Show();
                 }

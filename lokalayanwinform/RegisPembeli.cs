@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static lokalayanwinform.DatabaseHelper;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace lokalayanwinform
 {
     public partial class RegisPembeli : Form
     {
-        public RegisPembeli()
+        private int idPengguna;
+        public RegisPembeli(int idPengguna)
         {
             InitializeComponent();
+            this.idPengguna = idPengguna;
         }
 
         private void txtBoxAlamatPembeli_TextChanged(object sender, EventArgs e)
@@ -33,11 +37,7 @@ namespace lokalayanwinform
             try
             {
                 DatabaseHelper dbHelper = new DatabaseHelper();
-                Pembeli pembeli = new Pembeli
-                {
-                    Alamat = alamat
-                };
-                dbHelper.RegisterPembeli(pembeli);
+                dbHelper.RegisterPembeli(idPengguna, alamat);
                 MessageBox.Show("Registrasi Pembeli berhasil!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 Katalog dashboardPembeli = new Katalog();

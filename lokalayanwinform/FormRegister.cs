@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,27 +30,24 @@ namespace lokalayanwinform
                 MessageBox.Show("Tolong isi seluruh form dengan lengkap.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             try
             {
                 DatabaseHelper dbHelper = new DatabaseHelper();
-                Pengguna pengguna = new Pengguna
-                {
-                    Nama = name,
-                    Email = email,
-                    Password = password
-                };
-                int userId = dbHelper.RegisterUser(pengguna);
-                
+
+                int idPengguna = dbHelper.RegisterUser(name, password, email);
+
                 if (isSeller)
                 {
-                    RegisNelayan regisNelayan = new RegisNelayan(userId);
+                    RegisNelayan regisNelayan = new RegisNelayan(idPengguna);
                     regisNelayan.Show();
                 }
                 else
                 {
-                    RegisPembeli regisPembeli = new RegisPembeli();
+                    RegisPembeli regisPembeli = new RegisPembeli(idPengguna);
                     regisPembeli.Show();
                 }
+
                 this.Hide();
             }
             catch (Exception ex)

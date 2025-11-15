@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Net.NetworkInformation;
 using System.Reflection;
@@ -14,8 +15,9 @@ namespace lokalayanwinform
         {
             public static int idPengguna { get; set; }
             public static int? idNelayan { get; set; }
+            public static int? idPembeli { get; set; }
         }
-        private string connectionString = "Host=db.lxnnlskblsgipoymabyj.supabase.co;Port=5432;Database=postgres;Username=postgres;Password=nelayan123lmao;SSL Mode=Require;Trust Server Certificate=true;";
+        private string connectionString = "Host=aws-1-ap-southeast-1.pooler.supabase.com;Port=5432;Database=postgres;Username=postgres.lxnnlskblsgipoymabyj;Password=nelayan123lmao;SSL Mode=Require;Trust Server Certificate=true;";
         public void UpdateStockInDatabase(int newStock, int idProduk)
         {
             try
@@ -52,7 +54,7 @@ namespace lokalayanwinform
                         adapter.Fill(dt);
                         if (dt.Rows.Count > 0)
                         {
-                            return dt.Rows[0]; // Return the first row
+                            return dt.Rows[0];
                         }
                         else
                         {
@@ -115,6 +117,20 @@ namespace lokalayanwinform
                 {
                     cmd.Parameters.AddWithValue("idNelayan", idNelayan);
                     return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+        public int? GetidPembelibyidPengguna(int idPengguna)
+        {
+            using (var connection = new NpgsqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT \"idPembeli\" FROM \"Pembeli\" WHERE \"idPengguna\" = @idPengguna";
+                using (var cmd = new NpgsqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("idPengguna", idPengguna);
+                    object result = cmd.ExecuteScalar();
+                    return result != null ? (int?)result : null;
                 }
             }
         }
@@ -233,10 +249,10 @@ namespace lokalayanwinform
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO \"Nelayan\" (\"idPengguna\", lokasi) VALUES (@\"idPengguna\", @lokasi)";
+                string query = "INSERT INTO \"Nelayan\" (\"idPengguna\", lokasi) VALUES (@idPengguna, @lokasi)";
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("\"idPengguna\"", idPengguna);
+                    cmd.Parameters.AddWithValue ("idPengguna", idPengguna);
                     cmd.Parameters.AddWithValue("lokasi", lokasi);
                     cmd.ExecuteNonQuery();
                 }
@@ -247,10 +263,10 @@ namespace lokalayanwinform
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO \"Pembeli\" (\"idPengguna\", alamat) VALUES (@\"idPengguna\", @alamat)";
+                string query = "INSERT INTO \"Pembeli\" (\"idPengguna\", alamat) VALUES (@idPengguna, @alamat)";
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("\"idPengguna\"", idPengguna);
+                    cmd.Parameters.AddWithValue("idPengguna", idPengguna);
                     cmd.Parameters.AddWithValue("alamat", alamat);
                     cmd.ExecuteNonQuery();
                 }

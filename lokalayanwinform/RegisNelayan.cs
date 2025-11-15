@@ -7,18 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static lokalayanwinform.DatabaseHelper;
 
 namespace lokalayanwinform
 {
     public partial class RegisNelayan : Form
     {
-        private int userId;
-        public RegisNelayan(int userId)
+        private int idPengguna;
+        public RegisNelayan(int idPengguna)
         {
             InitializeComponent();
-            this.userId = userId;
+            this.idPengguna = idPengguna;
         }
-
         private void txtBoxLokasiNelayan_TextChanged(object sender, EventArgs e)
         {
             string lokasi = txtBoxLokasiNelayan.Text.Trim();
@@ -35,12 +35,7 @@ namespace lokalayanwinform
             try
             {
                 DatabaseHelper dbHelper = new DatabaseHelper();
-                Nelayan nelayan = new Nelayan
-                {
-                    IdPengguna = userId,
-                    Lokasi = lokasi
-                };
-                dbHelper.RegisterNelayan(nelayan);
+                dbHelper.RegisterNelayan(idPengguna, lokasi);
                 MessageBox.Show("Registrasi Nelayan berhasil!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 DashboardPenjual dashboardPenjual = new DashboardPenjual();
