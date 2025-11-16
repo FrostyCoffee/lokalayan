@@ -18,6 +18,26 @@ namespace lokalayanwinform
             public static int? idPembeli { get; set; }
         }
         private string connectionString = "Host=aws-1-ap-southeast-1.pooler.supabase.com;Port=5432;Database=postgres;Username=postgres.lxnnlskblsgipoymabyj;Password=nelayan123lmao;SSL Mode=Require;Trust Server Certificate=true;";
+        public DataTable GetPesananbyNelayan (int idNelayan)
+        {
+            using (var conn = new NpgsqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT p.* FROM \"Pesanan\" p" +
+                    "INNER JOIN Produk pr ON p.\"idProduk\" = pr.\"idProduk\"" +
+                    "WHERE pr.\"idNelayan\" = @idNelayan";
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("idNelayan", idNelayan);
+                    using (var adapter = new NpgsqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
         public int InsertPesanan(int idPembeli, int totalHarga, string status)
         {
             using (var conn = new NpgsqlConnection(connectionString))
