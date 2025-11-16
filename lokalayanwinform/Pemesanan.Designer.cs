@@ -31,11 +31,11 @@
             TitlePemesanan = new Label();
             lblPembayaran = new Label();
             lblPengiriman = new Label();
-            rdbTranfer = new RadioButton();
-            rdbQris = new RadioButton();
             rdbPos = new RadioButton();
             rdbJne = new RadioButton();
             btnPesan = new Button();
+            cbTransfer = new CheckBox();
+            cbQris = new CheckBox();
             SuspendLayout();
             // 
             // TitlePemesanan
@@ -67,28 +67,6 @@
             lblPengiriman.Size = new Size(194, 22);
             lblPengiriman.TabIndex = 2;
             lblPengiriman.Text = "Ekspedisi Pengiriman";
-            // 
-            // rdbTranfer
-            // 
-            rdbTranfer.AutoSize = true;
-            rdbTranfer.Location = new Point(111, 164);
-            rdbTranfer.Name = "rdbTranfer";
-            rdbTranfer.Size = new Size(107, 20);
-            rdbTranfer.TabIndex = 3;
-            rdbTranfer.TabStop = true;
-            rdbTranfer.Text = "Transfer Bank";
-            rdbTranfer.UseVisualStyleBackColor = true;
-            // 
-            // rdbQris
-            // 
-            rdbQris.AutoSize = true;
-            rdbQris.Location = new Point(112, 195);
-            rdbQris.Name = "rdbQris";
-            rdbQris.Size = new Size(55, 20);
-            rdbQris.TabIndex = 4;
-            rdbQris.TabStop = true;
-            rdbQris.Text = "QRIS";
-            rdbQris.UseVisualStyleBackColor = true;
             // 
             // rdbPos
             // 
@@ -126,16 +104,36 @@
             btnPesan.UseVisualStyleBackColor = false;
             btnPesan.Click += btnPesan_Click;
             // 
+            // cbTransfer
+            // 
+            cbTransfer.AutoSize = true;
+            cbTransfer.Location = new Point(112, 169);
+            cbTransfer.Name = "cbTransfer";
+            cbTransfer.Size = new Size(108, 20);
+            cbTransfer.TabIndex = 8;
+            cbTransfer.Text = "Transfer Bank";
+            cbTransfer.UseVisualStyleBackColor = true;
+            // 
+            // cbQris
+            // 
+            cbQris.AutoSize = true;
+            cbQris.Location = new Point(112, 196);
+            cbQris.Name = "cbQris";
+            cbQris.Size = new Size(56, 20);
+            cbQris.TabIndex = 9;
+            cbQris.Text = "QRIS";
+            cbQris.UseVisualStyleBackColor = true;
+            // 
             // Pemesanan
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 480);
+            Controls.Add(cbQris);
+            Controls.Add(cbTransfer);
             Controls.Add(btnPesan);
             Controls.Add(rdbJne);
             Controls.Add(rdbPos);
-            Controls.Add(rdbQris);
-            Controls.Add(rdbTranfer);
             Controls.Add(lblPengiriman);
             Controls.Add(lblPembayaran);
             Controls.Add(TitlePemesanan);
@@ -151,10 +149,10 @@
         private Label TitlePemesanan;
         private Label lblPembayaran;
         private Label lblPengiriman;
-        private RadioButton rdbTranfer;
-        private RadioButton rdbQris;
         private RadioButton rdbPos;
         private RadioButton rdbJne;
         private Button btnPesan;
+        private CheckBox cbTransfer;
+        private CheckBox cbQris;
     }
 }

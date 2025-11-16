@@ -32,13 +32,15 @@ namespace lokalayanwinform
                 flpKatalog.Controls.Clear();
                 foreach (DataRow row in produkData.Rows)
                 {
+                    int idProduk = Convert.ToInt32(row["idProduk"]);
                     Panel productPanel = new Panel
                     {
                         Size = new Size(200, 100),
                         BorderStyle = BorderStyle.FixedSingle,
                         Margin = new Padding(10),
-                        Tag = row["idProduk"]
+                        Tag = idProduk
                     };
+                    productPanel.Click += (s, e) => OpenProductPage(idProduk);
                     Label kategoriLabel = new Label
                     {
                         Text = "Kategori: " + row["kategori"].ToString(),

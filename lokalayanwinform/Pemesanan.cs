@@ -28,13 +28,13 @@ namespace lokalayanwinform
 
         private void btnPesan_Click(object sender, EventArgs e)
         {
-            string metodePembayaran = rdbTranfer.Checked ? "Transfer" : "QRIS";
+            string metodePembayaran = cbTransfer.Checked ? "Transfer" : "QRIS";
             string metodePengiriman = rdbPos.Checked ? "Pos Indonesia" : "JNE";
             string statusPembayaran = "diterima";
             string statusPesanan = "diproses";
             DatabaseHelper db = new DatabaseHelper();
 
-            int idPesanan = db.InsertPesanan(idPembeli, totalHarga, statusPesanan);
+            int idPesanan = db.InsertPesanan(idProduk, idPembeli, totalHarga, statusPesanan);
             db.InsertDetailPesanan(idPesanan, idProduk, hargaProduk, jumlahBeli);
             db.InsertPembayaran(idPesanan, metodePembayaran, statusPembayaran);
             db.InsertPengiriman(idPesanan, metodePengiriman);

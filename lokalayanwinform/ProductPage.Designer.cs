@@ -56,6 +56,7 @@
             btnKembaliProduk.TabIndex = 0;
             btnKembaliProduk.Text = "Kembali";
             btnKembaliProduk.UseVisualStyleBackColor = false;
+            btnKembaliProduk.Click += btnKembaliProduk_Click;
             // 
             // titleProduk
             // 
@@ -98,6 +99,7 @@
             lblHargaProduk.Size = new Size(113, 26);
             lblHargaProduk.TabIndex = 7;
             lblHargaProduk.Text = "Rp190.890";
+            lblHargaProduk.Click += lblHargaProduk_Click;
             // 
             // lblTanggalTangkap
             // 

@@ -122,6 +122,7 @@
             btnEditProduk.TabIndex = 7;
             btnEditProduk.Text = "Edit Produk";
             btnEditProduk.UseVisualStyleBackColor = false;
+            btnEditProduk.Click += btnEditProduk_Click;
             // 
             // btnCekStok
             // 
@@ -135,6 +136,7 @@
             btnCekStok.TabIndex = 8;
             btnCekStok.Text = "Cek Pesanan";
             btnCekStok.UseVisualStyleBackColor = false;
+            btnCekStok.Click += btnCekStok_Click;
             // 
             // DashboardPenjual
             // 

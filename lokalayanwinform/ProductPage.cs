@@ -36,7 +36,6 @@ namespace lokalayanwinform
                 titleKategori.Text = product["kategori"].ToString();
                 titleJenis.Text = product["jenis"].ToString();
                 fillGrade.Text = product["grade"].ToString();
-                fillTanggal.Text = Convert.ToDateTime(product["tanggalTangkap"]).ToString("dd/MM/yyyy");
                 lblHargaProduk.Text = "Rp " + product["harga"].ToString();
                 counterStokProduk.Text = product["stok"].ToString();
 
@@ -63,10 +62,15 @@ namespace lokalayanwinform
                     MessageBox.Show("Stok tidak mencukupi untuk jumlah pembelian yang diminta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                int hargaProduk = Convert.ToInt32(lblHargaProduk.Text.Replace("Rp ", "").Replace(".", ""));
+                int totalHarga = CalculateTotalPrice(hargaProduk, jumlahBeli);
+                PostOrderDetails(idProduk, jumlahBeli, hargaProduk, totalHarga, Session.idPembeli ?? 0);
                 currentStock -= jumlahBeli;
                 counterStokProduk.Text = currentStock.ToString();
                 dbHelper.UpdateStockInDatabase(currentStock, idProduk);
                 MessageBox.Show("Pembelian berhasil!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                RedirectToPemesanan();
             }
             catch (FormatException)
             {
@@ -76,6 +80,41 @@ namespace lokalayanwinform
             {
                 MessageBox.Show($"Gagal memproses pembelian: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private int CalculateTotalPrice(int hargaProduk, int jumlahBeli)
+        {
+            return hargaProduk * jumlahBeli;
+        }
+
+        private void PostOrderDetails(int idProduk, int jumlahBeli, int hargaProduk, int totalHarga, int idPembeli)
+        {
+            try
+            {
+                Pemesanan pemesananForm = new Pemesanan();
+                pemesananForm.ReceiveOrderDetails(idProduk, jumlahBeli, hargaProduk, totalHarga, idPembeli);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Gagal mengirim detail pesanan: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void RedirectToPemesanan()
+        {
+            Pemesanan pemesananForm = new Pemesanan();
+            pemesananForm.Show();
+            this.Close();
+        }
+
+        private void lblHargaProduk_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKembaliProduk_Click(object sender, EventArgs e)
+        {
+            Katalog katalog = new Katalog();
+            katalog.Show();
+            this.Close();
         }
     }
 }

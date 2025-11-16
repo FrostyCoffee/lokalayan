@@ -23,9 +23,11 @@ namespace lokalayanwinform
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT p.* FROM \"Pesanan\" p" +
-                    "INNER JOIN Produk pr ON p.\"idProduk\" = pr.\"idProduk\"" +
-                    "WHERE pr.\"idNelayan\" = @idNelayan";
+                string query = query = @"
+                SELECT p.*
+                FROM ""Pesanan"" p
+                INNER JOIN ""Produk"" pr ON p.""idProduk"" = pr.""idProduk""
+                WHERE pr.""idNelayan"" = @idNelayan";
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("idNelayan", idNelayan);
@@ -38,14 +40,15 @@ namespace lokalayanwinform
                 }
             }
         }
-        public int InsertPesanan(int idPembeli, int totalHarga, string status)
+        public int InsertPesanan(int idProduk, int idPembeli, int totalHarga, string status)
         {
             using (var conn = new NpgsqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "INSERT INTO \"Pesanan\" (\"idPembeli\", \"totalHarga\", \"status\") VALUES (@idPembeli, @totalHarga, @status) RETURNING \"idPesanan\"";
+                string query = "INSERT INTO \"Pesanan\" (\"idProduk\",\"idPembeli\", \"totalHarga\", \"status\") VALUES (@idProduk, @idPembeli, @totalHarga, @status) RETURNING \"idPesanan\"";
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
+                    cmd.Parameters.AddWithValue("idProduk", idProduk);
                     cmd.Parameters.AddWithValue("idPembeli", idPembeli);
                     cmd.Parameters.AddWithValue("totalHarga", totalHarga);
                     cmd.Parameters.AddWithValue("status", status);
@@ -149,7 +152,7 @@ namespace lokalayanwinform
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT kategori, jenis, harga FROM \"Produk\"";
+                string query = "SELECT \"idProduk\", kategori, jenis, harga FROM \"Produk\"";
                 using (var adapter = new NpgsqlDataAdapter(query, connection))
                 {
                     DataTable dt = new DataTable();

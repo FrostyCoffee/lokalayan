@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lokalayanwinform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7c0271091736a50a1b18a737b3aff881984f851")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5499e7a2f14f0c451853b96e257df85d580afc1")]
 [assembly: System.Reflection.AssemblyProductAttribute("lokalayanwinform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lokalayanwinform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

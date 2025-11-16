@@ -1,0 +1,8 @@
+C:\lokalayanfix\lokalayan\lokalayanwinform.exe
+C:\lokalayanfix\lokalayan\lokalayanwinform.dll
+C:\lokalayanfix\lokalayan\lokalayanwinform.deps.json
+C:\lokalayanfix\lokalayan\lokalayanwinform.runtimeconfig.json
+C:\lokalayanfix\lokalayan\lokalayanwinform.pdb
+C:\lokalayanfix\lokalayan\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\lokalayanfix\lokalayan\Microsoft.Extensions.Logging.Abstractions.dll
+C:\lokalayanfix\lokalayan\Npgsql.dll
