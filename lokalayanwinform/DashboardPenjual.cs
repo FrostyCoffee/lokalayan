@@ -41,5 +41,20 @@ namespace lokalayanwinform
             InitializeComponent();
             LoadCounters();
         }
+
+        private void btnCekStok_Click(object sender, EventArgs e)
+        {
+            PemesananPenjual pemesananPenjual = new PemesananPenjual();
+            pemesananPenjual.Show();
+            this.Hide();
+
+        }
+
+        private void btnEditProduk_Click(object sender, EventArgs e)
+        {
+            EditProduk editProduk = new EditProduk();
+            editProduk.Show();
+            this.Hide();
+        }
     }
 }
