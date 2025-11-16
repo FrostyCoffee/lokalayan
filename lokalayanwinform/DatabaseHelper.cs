@@ -234,7 +234,7 @@ namespace lokalayanwinform
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT idProduk, kategori, jenis, grade, harga, stok, tanggalTangkap  FROM Produk";
+                string query = "SELECT \"idProduk\", kategori, jenis, grade, harga, stok, \"tanggalTangkap\"  FROM \"Produk\"";
                 using (var adapter = new NpgsqlDataAdapter(query, connection))
                 {
                     adapter.SelectCommand.Parameters.AddWithValue("idNelayan", idNelayan);
@@ -244,30 +244,30 @@ namespace lokalayanwinform
                 }
             }
         }
-        public void AddProduk(string kategori, string jenis, string grade, int harga, int stok, int tanggalTangkap)
+        public void AddProduk(int idNelayan, string kategori, string jenis, string grade, int harga, int stok)
         {
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO Produk (kategori, jenis, grade, harga, stok, tanggalTangkap) VALUES (@kategori, @jenis, @grade, @harga, @stok, @tanggalTangkap)";
+                string query = "INSERT INTO \"Produk\" (\"idNelayan\", kategori, jenis, grade, harga, stok) VALUES (@idNelayan, @kategori, @jenis, @grade, @harga, @stok)";
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
+                    cmd.Parameters.AddWithValue("idNelayan", idNelayan);
                     cmd.Parameters.AddWithValue("kategori", kategori);
                     cmd.Parameters.AddWithValue("jenis", jenis);
                     cmd.Parameters.AddWithValue("grade", grade);
                     cmd.Parameters.AddWithValue("harga", harga);
                     cmd.Parameters.AddWithValue("stok", stok);
-                    cmd.Parameters.AddWithValue("tanggalTangkap", tanggalTangkap);
                     cmd.ExecuteNonQuery();
                 }
             }
         }
-        public void UpdateProduk(int idProduk, string kategori, string jenis, string grade, int harga, int stok, int tanggalTangkap)
+        public void UpdateProduk(int idProduk, string kategori, string jenis, string grade, int harga, int stok)
         {
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "UPDATE Produk SET kategori = @kategori, jenis = @jenis, grade = @grade, harga=@harga, stok=@stok, tanggalTangkap=@tanggalTangkap WHERE idProduk = @idProduk";
+                string query = "UPDATE \"Produk\" SET kategori = @kategori, jenis = @jenis, grade = @grade, harga=@harga, stok=@stok WHERE \"idProduk\" = @idProduk";
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("id", idProduk);
@@ -276,7 +276,6 @@ namespace lokalayanwinform
                     cmd.Parameters.AddWithValue("grade", grade);
                     cmd.Parameters.AddWithValue("harga", harga);
                     cmd.Parameters.AddWithValue("stok", stok);
-                    cmd.Parameters.AddWithValue("tanggalTangkap", tanggalTangkap);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -286,7 +285,7 @@ namespace lokalayanwinform
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "DELETE FROM Produk WHERE idProduk = @idProduk";
+                string query = "DELETE FROM \"Produk\" WHERE \"idProduk\" = @idProduk";
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("idProduk", idProduk);

@@ -62,17 +62,16 @@ namespace lokalayanwinform
             string grade = textBoxGrade.Text.Trim();
             int harga = int.Parse(textBoxHarga.Text.Trim());
             int stok = int.Parse(textBoxStok.Text.Trim());
-            int tanggalTangkap = int.Parse(textBoxTanggal.Text.Trim());
 
             if (string.IsNullOrEmpty(kategori) || string.IsNullOrEmpty(jenis) || string.IsNullOrEmpty(grade) ||
-                harga <= 0 || stok < 0 || tanggalTangkap <= 0)
+                harga <= 0 || stok < 0)
             {
                 MessageBox.Show("Tolong isi semua field dengan benar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
             {
-                dbHelper.AddProduk(kategori, jenis, grade, harga, stok, tanggalTangkap);
+                dbHelper.AddProduk((int)Session.idNelayan, kategori, jenis, grade, harga, stok);
                 MessageBox.Show("Produk berhasil ditambahkan.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadProduk();
             }
@@ -91,7 +90,6 @@ namespace lokalayanwinform
                 textBoxGrade.Text = selectedRow.Cells["grade"].Value.ToString();
                 textBoxHarga.Text = selectedRow.Cells["harga"].Value.ToString();
                 textBoxStok.Text = selectedRow.Cells["stok"].Value.ToString();
-                textBoxTanggal.Text = selectedRow.Cells["tanggalTangkap"].Value.ToString();
             }
         }
 
@@ -108,10 +106,9 @@ namespace lokalayanwinform
             string grade = textBoxGrade.Text.Trim();
             int harga = int.Parse(textBoxHarga.Text.Trim());
             int stok = int.Parse(textBoxStok.Text.Trim());
-            int tanggalTangkap = int.Parse(textBoxTanggal.Text.Trim());
 
             if (string.IsNullOrEmpty(kategori) || string.IsNullOrEmpty(jenis) || string.IsNullOrEmpty(grade) ||
-                harga <= 0 || stok < 0 || tanggalTangkap <= 0)
+                harga <= 0 || stok < 0)
             {
                 MessageBox.Show("Tolong isi semua field dengan benar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -119,7 +116,7 @@ namespace lokalayanwinform
 
             try
             {
-                dbHelper.UpdateProduk(idProduk, kategori, jenis, grade, harga, stok, tanggalTangkap);
+                dbHelper.UpdateProduk(idProduk, kategori, jenis, grade, harga, stok);
                 MessageBox.Show("Produk berhasil diperbarui.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadProduk();
             }
