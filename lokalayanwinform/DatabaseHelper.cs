@@ -18,6 +18,66 @@ namespace lokalayanwinform
             public static int? idPembeli { get; set; }
         }
         private string connectionString = "Host=aws-1-ap-southeast-1.pooler.supabase.com;Port=5432;Database=postgres;Username=postgres.lxnnlskblsgipoymabyj;Password=nelayan123lmao;SSL Mode=Require;Trust Server Certificate=true;";
+        public int InsertPesanan(int idPembeli, int totalHarga, string status)
+        {
+            using (var conn = new NpgsqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO \"Pesanan\" (\"idPembeli\", \"totalHarga\", \"status\") VALUES (@idPembeli, @totalHarga, @status) RETURNING \"idPesanan\"";
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("idPembeli", idPembeli);
+                    cmd.Parameters.AddWithValue("totalHarga", totalHarga);
+                    cmd.Parameters.AddWithValue("status", status);
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+        }
+        public void InsertDetailPesanan(int idPesanan, int idProduk, int hargaSatuan, int jumlah)
+        {
+            using (var conn = new NpgsqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO \"detailPesanan\" (\"idPesanan\", \"idProduk\", \"hargaSatuan\", \"jumlah\") VALUES (@idPesanan, @idProduk, @hargaSatuan, @jumlah)";
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("idPesanan", idPesanan);
+                    cmd.Parameters.AddWithValue("idProduk", idProduk);
+                    cmd.Parameters.AddWithValue("hargaSatuan", hargaSatuan);
+                    cmd.Parameters.AddWithValue("jumlah", jumlah);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        public void InsertPembayaran(int idPesanan, string metode, string status)
+        {
+            using (var conn = new NpgsqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO \"Pembayaran\" (\"idPesanan\", \"metode\", \"status\") VALUES (@idPesanan, @metode, @status)";
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("idPesanan", idPesanan);
+                    cmd.Parameters.AddWithValue("metode", metode);
+                    cmd.Parameters.AddWithValue("status", status);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        public void InsertPengiriman(int idPesanan, string metode)
+        {
+            using (var conn = new NpgsqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "INSERT INTO \"Pengiriman\" (\"idPesanan\", \"metode\") VALUES (@idPesanan, @metode)";
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("idPesanan", idPesanan);
+                    cmd.Parameters.AddWithValue("metode", metode);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
         public void UpdateStockInDatabase(int newStock, int idProduk)
         {
             try
