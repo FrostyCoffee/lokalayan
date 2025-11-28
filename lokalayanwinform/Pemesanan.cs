@@ -28,11 +28,18 @@ namespace lokalayanwinform
 
         private void btnPesan_Click(object sender, EventArgs e)
         {
+
             string metodePembayaran = cbTransfer.Checked ? "Transfer" : "QRIS";
             string metodePengiriman = rdbPos.Checked ? "Pos Indonesia" : "JNE";
             string statusPembayaran = "diterima";
             string statusPesanan = "diproses";
             DatabaseHelper db = new DatabaseHelper();
+
+            if (idPembeli <= 0)
+            {
+                MessageBox.Show("Invalid buyer ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             int idPesanan = db.InsertPesanan(idProduk, idPembeli, totalHarga, statusPesanan);
             db.InsertDetailPesanan(idPesanan, idProduk, hargaProduk, jumlahBeli);
@@ -41,6 +48,15 @@ namespace lokalayanwinform
 
             MessageBox.Show("Pesanan berhasil dibuat!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            RedirectToKatalog();
+
+        }
+        private void RedirectToKatalog()
+        {
+            Katalog katalog = new Katalog();
+            katalog.Show();
+            this.Close();
         }
     }
 }
+
