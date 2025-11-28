@@ -45,6 +45,7 @@
             btnTambahProduk = new Button();
             btnPerbarahuiProduk = new Button();
             btnHapusProduk = new Button();
+            btn_back = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgrProduk).BeginInit();
             SuspendLayout();
             // 
@@ -212,11 +213,26 @@
             btnHapusProduk.UseVisualStyleBackColor = false;
             btnHapusProduk.Click += btnHapusProduk_Click;
             // 
+            // btn_back
+            // 
+            btn_back.BackColor = Color.Turquoise;
+            btn_back.FlatAppearance.BorderSize = 0;
+            btn_back.FlatStyle = FlatStyle.Flat;
+            btn_back.Font = new Font("Montserrat", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_back.Location = new Point(35, 22);
+            btn_back.Name = "btn_back";
+            btn_back.Size = new Size(75, 23);
+            btn_back.TabIndex = 17;
+            btn_back.Text = "Kembali";
+            btn_back.UseVisualStyleBackColor = false;
+            btn_back.Click += btn_back_Click;
+            // 
             // EditProduk
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn_back);
             Controls.Add(btnHapusProduk);
             Controls.Add(btnPerbarahuiProduk);
             Controls.Add(btnTambahProduk);
@@ -260,5 +276,6 @@
         private Button btnTambahProduk;
         private Button btnPerbarahuiProduk;
         private Button btnHapusProduk;
+        private Button btn_back;
     }
 }

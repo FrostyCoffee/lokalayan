@@ -35,5 +35,12 @@ namespace lokalayanwinform
             DataTable dt = dbHelper.GetPesananbyNelayan(idNelayan);
             dtgrCekPemesanan.DataSource = dt;
         }
+
+        private void btn_balik_Click(object sender, EventArgs e)
+        {
+            DashboardPenjual dashboardPenjual = new DashboardPenjual();
+            dashboardPenjual.Show();
+            this.Close();
+        }
     }
 }

@@ -64,13 +64,24 @@ namespace lokalayanwinform
                 }
                 int hargaProduk = Convert.ToInt32(lblHargaProduk.Text.Replace("Rp ", "").Replace(".", ""));
                 int totalHarga = CalculateTotalPrice(hargaProduk, jumlahBeli);
-                PostOrderDetails(idProduk, jumlahBeli, hargaProduk, totalHarga, Session.idPembeli ?? 0);
+
+                int idPembeli = Session.idPembeli ?? 0;
+                if (idPembeli == 0)
+                {
+                    MessageBox.Show("ID Pembeli tidak valid. Silakan login ulang.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 currentStock -= jumlahBeli;
                 counterStokProduk.Text = currentStock.ToString();
                 dbHelper.UpdateStockInDatabase(currentStock, idProduk);
                 MessageBox.Show("Pembelian berhasil!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                RedirectToPemesanan();
+                // Pass order details to Pemesanan form
+                Pemesanan pemesananForm = new Pemesanan();
+                pemesananForm.ReceiveOrderDetails(idProduk, jumlahBeli, hargaProduk, totalHarga, idPembeli);
+                pemesananForm.Show();
+                this.Close();
             }
             catch (FormatException)
             {
@@ -81,6 +92,7 @@ namespace lokalayanwinform
                 MessageBox.Show($"Gagal memproses pembelian: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private int CalculateTotalPrice(int hargaProduk, int jumlahBeli)
         {
             return hargaProduk * jumlahBeli;

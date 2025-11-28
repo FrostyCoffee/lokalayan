@@ -30,6 +30,7 @@
         {
             titlePesananPenjual = new Label();
             dtgrCekPemesanan = new DataGridView();
+            btn_balik = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgrCekPemesanan).BeginInit();
             SuspendLayout();
             // 
@@ -52,11 +53,26 @@
             dtgrCekPemesanan.TabIndex = 1;
             dtgrCekPemesanan.CellContentClick += dtgrCekPemesanan_CellContentClick;
             // 
+            // btn_balik
+            // 
+            btn_balik.BackColor = Color.Turquoise;
+            btn_balik.FlatAppearance.BorderSize = 0;
+            btn_balik.FlatStyle = FlatStyle.Flat;
+            btn_balik.Font = new Font("Montserrat", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_balik.Location = new Point(24, 24);
+            btn_balik.Name = "btn_balik";
+            btn_balik.Size = new Size(75, 23);
+            btn_balik.TabIndex = 2;
+            btn_balik.Text = "Kembali";
+            btn_balik.UseVisualStyleBackColor = false;
+            btn_balik.Click += btn_balik_Click;
+            // 
             // PemesananPenjual
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn_balik);
             Controls.Add(dtgrCekPemesanan);
             Controls.Add(titlePesananPenjual);
             Name = "PemesananPenjual";
@@ -70,5 +86,6 @@
 
         private Label titlePesananPenjual;
         private DataGridView dtgrCekPemesanan;
+        private Button btn_balik;
     }
 }

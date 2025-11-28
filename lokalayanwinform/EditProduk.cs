@@ -125,5 +125,12 @@ namespace lokalayanwinform
                 MessageBox.Show($"Ada error saat memperbaharui produk: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            DashboardPenjual dashboardPenjual = new DashboardPenjual();
+            dashboardPenjual.Show();
+            this.Close();
+        }
     }
 }
