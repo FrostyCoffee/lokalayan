@@ -273,7 +273,7 @@ namespace lokalayanwinform
                 string query = "UPDATE \"Produk\" SET kategori = @kategori, jenis = @jenis, grade = @grade, harga=@harga, stok=@stok WHERE \"idProduk\" = @idProduk";
                 using (var cmd = new NpgsqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("id", idProduk);
+                    cmd.Parameters.AddWithValue("idProduk", idProduk);
                     cmd.Parameters.AddWithValue("kategori", kategori);
                     cmd.Parameters.AddWithValue("jenis", jenis);
                     cmd.Parameters.AddWithValue("grade", grade);
